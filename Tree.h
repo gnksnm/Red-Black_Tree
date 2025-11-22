@@ -46,6 +46,7 @@ private:
     Node* minimum(Node* x);
 public:
     Red_Black();
+    Node* find_el(int data);
     void make_Tree(string str) override;
     void transplant(Node* u, Node* v);
     void delete_node(int data);

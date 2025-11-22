@@ -15,7 +15,7 @@ Tree::Tree() {
 }
 
 void Tree::make_Tree(string str) {
-    // ПРОВЕРКУ НА КОРРЕКТНОСТЬ ВВОДА СДЕЛАТЬ ОТДЕЛЬНО
+
     root = new Node;
     unsigned left_count = 1, right_count = 0;
     unsigned curr = 1;
@@ -166,6 +166,16 @@ Red_Black::Red_Black() : Tree() {
     NIL = new Node;
     NIL->red = false;
     root=NIL;
+}
+
+Node * Red_Black::find_el(int data) {
+    Node* z = root;
+    while (z != nullptr && z->data != data) {
+        if (data < z->data) z = z->left;
+        else z = z->right;
+    }
+    if (z == nullptr) return nullptr;
+    return z;
 }
 
 void Red_Black::make_Tree(string str) {
