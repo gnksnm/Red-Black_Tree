@@ -168,6 +168,15 @@ Red_Black::Red_Black() : Tree() {
     root=NIL;
 }
 
+Node * Red_Black::find_el(int data) {
+    Node*z=root;
+    while (z != nullptr && z->data != data) {
+        if (data < z->data) z = z->left;
+        else z = z->right;
+    }
+    if (z == nullptr) return nullptr;
+}
+
 void Red_Black::make_Tree(string str) {
     Tree temp;
     temp.make_Tree(str);
