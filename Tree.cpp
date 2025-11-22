@@ -15,7 +15,6 @@ Tree::Tree() {
 }
 
 void Tree::make_Tree(string str) {
-    // ПРОВЕРКУ НА КОРРЕКТНОСТЬ ВВОДА СДЕЛАТЬ ОТДЕЛЬНО
     root = new Node;
     unsigned left_count = 1, right_count = 0;
     unsigned curr = 1;
